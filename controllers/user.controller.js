@@ -2,7 +2,6 @@ const User = require('../models/user.model');
 
 exports.login = async (req, res) => {
     const { email, password } = req.body;
-    res.send('Login logic here');
     try {
         const user = await User.findOne({ email });
         if (!user) {
